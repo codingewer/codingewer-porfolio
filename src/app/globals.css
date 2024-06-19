@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+25&family=Silkscreen:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+    --main-color:#FF0000;
+    --back-color:#151515;
+    --link-color:#ff7361;
+    --white-color:#E8F9FD;
+
+
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -103,5 +112,6 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    font-family: "Titillium Web", sans-serif;
   }
 }

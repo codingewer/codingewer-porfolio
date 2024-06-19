@@ -1,0 +1,100 @@
+.topbar-container {
+  position: fixed;
+  position: -webkit-sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.topbar-inner {
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-navs {
+  position: absolute;
+  right: 0;
+  width: max-content;
+  top: 0;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.topbar-navs-a {
+  position: relative;
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.topbar-navs-a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  bottom: -2px; /* Çizginin yazının hemen altında görünmesi için */
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.topbar-navs-a-active::after {
+  transform: scaleX(1);
+}
+
+.topbar-navs-a:hover::after {
+  transform: scaleX(1);
+  background-color: var(--link-color);
+}
+
+@media screen and (max-width: 1080px) {
+    .topbar-navs{
+        display: none;
+    }
+    .menu-btn{
+        position: absolute;
+        right: 0;
+        border: none;
+        background:none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .topbar-inner {
+        width: calc(100% - 48px);
+      }
+      .topbar-menu{
+        display: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding-block: 24px;
+      }
+}
+
+@media screen and (min-width: 1080px) {
+    .menu-btn{
+        display: none;
+    }
+    .topbar-inner {
+        width: 75%;
+      }
+}
