@@ -29,12 +29,12 @@
 
 @media screen and (max-width: 1080px) {
   .home-title {
-    font-size: 64px;
+    font-size: 48px;
     text-wrap: wrap;
     width: 100%;
   }
   .home-subtitle {
-    font-size: 24px;
+    font-size: 16px;
     text-wrap: wrap;
   }
   .home-title-container {
