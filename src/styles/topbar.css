@@ -97,4 +97,7 @@
     .topbar-inner {
         width: 75%;
       }
+      .topbar-menu{
+        display: none;
+      }
 }

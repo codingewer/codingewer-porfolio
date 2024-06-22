@@ -50,5 +50,24 @@
   }
   .home-subtitle {
     color: var(--wihte-color);
+    font-size: 32px;
   }
+}
+
+#cursor-shadow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background: none;
+  background-color: var(--main-color);
+  opacity: 1;
+
+  filter: blur(50px);
+  pointer-events: none; /* Cursor ile etkileşimi önler */
+  border-radius: 50%; /* Yuvarlak bir gölge için */
+  box-shadow: 0 0 1000px 300px rgb(255, 39, 31, 0.5);
+  transition: transform 0.1s ease; /* Hareketleri yumuşatır */
+  transform: translate(-50%, -50%);
 }

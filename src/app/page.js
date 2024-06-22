@@ -5,7 +5,10 @@ function index() {
     <div>
       <TopBar />
       <Home />
-      <Home />
+      <div id="projects" >
+
+      project
+      </div>
     </div>
   );
 }

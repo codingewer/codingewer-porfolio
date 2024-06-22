@@ -50,7 +50,7 @@ function TopBar() {
                 ? " topbar-navs-a-active topbar-navs-a"
                 : "topbar-navs-a"
             }
-            href="/"
+            href="#projects"
           >
             Products
           </Link>
@@ -139,7 +139,7 @@ function TopBar() {
               ? " topbar-navs-a-active topbar-navs-a"
               : "topbar-navs-a"
           }
-          href="/"
+          href="#projects"
         >
           Contact
         </Link>
