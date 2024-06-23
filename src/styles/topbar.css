@@ -8,8 +8,8 @@
   justify-content: center;
   width: 100%;
   height: fit-content;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  z-index: 2;
+  background: transparent;
 }
 
 .topbar-inner {

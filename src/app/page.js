@@ -1,4 +1,5 @@
 import Home from "@/components/Home";
+import Projects from "@/components/Projects";
 import TopBar from "@/components/TopBar";
 function index() {
   return (
@@ -6,8 +7,7 @@ function index() {
       <TopBar />
       <Home />
       <div id="projects" >
-
-      project
+      <Projects/>
       </div>
     </div>
   );
