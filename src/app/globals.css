@@ -112,6 +112,9 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
-    font-family: "Titillium Web", sans-serif;
   }
+}
+
+.App{
+  font-family: "Titillium Web", sans-serif;
 }

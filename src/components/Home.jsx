@@ -5,7 +5,6 @@ import LetterByLetter from "./LetterByLetter";
 function Home() {
   useEffect(() => {
     const cursorShadow = document.getElementById("cursor-shadow");
-
     const handleMouseMove = (e) => {
       cursorShadow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     };
@@ -67,7 +66,7 @@ function Home() {
           className="scene"
         >
           {divs.map((div, index) => (
-            <div key={index} className="box" style={{ width: div.width }}></div>
+            <div key={index} className="box"  style={{ width: div.width }}></div>
           ))}
         </div>
         <div
@@ -75,7 +74,7 @@ function Home() {
           className="scene"
         >
           {divs.map((div, index) => (
-            <div key={index} className="box" style={{ width: div.width }}></div>
+            <div key={index} className="box"  style={{ width: div.width }}></div>
           ))}
         </div>
       </div>

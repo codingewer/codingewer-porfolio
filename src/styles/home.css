@@ -1,8 +1,10 @@
 .home-title-container,
 .home {
+  position: relative;
   flex-direction: column;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .home-title-container {
   align-items: start;
@@ -23,21 +25,22 @@
   font-style: normal;
   color: var(--main-color);
   text-align: left;
+  font-size: 12vw;
 }
 .home-subtitle {
   font-family: "Titillium Web", sans-serif;
   color: var(--wihte-color);
   text-align: left;
+  font-size: 2vw;
 }
+
 
 @media screen and (max-width: 1080px) {
   .home-title {
-    font-size: 48px;
     text-wrap: wrap;
     width: 100%;
   }
   .home-subtitle {
-    font-size: 16px;
     text-wrap: wrap;
   }
   .home-title-container {
@@ -49,11 +52,9 @@
 
 @media screen and (min-width: 1080px) {
   .home-title {
-    font-size: 164px;
   }
   .home-subtitle {
     color: var(--wihte-color);
-    font-size: 32px;
   }
 }
 
