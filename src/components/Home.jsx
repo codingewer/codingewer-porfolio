@@ -15,7 +15,19 @@ function Home() {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
+  const [position, setPosition] = useState({
+    x: window.scrollX,
+    y: window.scrollY,
+  });
+  const handleScroll = () => {
+    setPosition({ x: window.scrollX, y: window.scrollY });
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const divs = [
     { id: 1, width: 200 },
     { id: 2, width: 300 },
@@ -61,20 +73,20 @@ function Home() {
         <div
           style={{
             transform: "rotateY(45deg)",
-            left: 100,
+            
           }}
           className="scene"
         >
           {divs.map((div, index) => (
-            <div key={index} className="box"  style={{ width: div.width }}></div>
+            <div key={index} className="box" style={{ width: div.width }}></div>
           ))}
         </div>
         <div
-          style={{ transform: "rotateY(-45deg)", right: 100 }}
+          style={{ transform: "rotateY(-45deg)"}}
           className="scene"
         >
           {divs.map((div, index) => (
-            <div key={index} className="box"  style={{ width: div.width }}></div>
+            <div key={index} className="box" style={{ width: div.width }}></div>
           ))}
         </div>
       </div>

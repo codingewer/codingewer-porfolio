@@ -18,65 +18,56 @@ function Products({ id }) {
       handleScroll()
     }
   }, [])
+  const products = [
+    {id:1,
+      tittle:"Web Sites",
+      content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod itaque qui ducimus aspernatur animi recusandae quas dignissimos et nobis non!"
+    },
+    {id:2,
+      tittle:"Mobile Apps",
+      content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod itaque qui ducimus aspernatur animi recusandae quas dignissimos et nobis non!"
+    },
+    {id:3,
+      tittle:"server Side Apps",
+      content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod itaque qui ducimus aspernatur animi recusandae quas dignissimos et nobis non!"
+    },
+    {id:4,
+      tittle:"AI Solutions For Companies(Coming Soon)",
+      content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod itaque qui ducimus aspernatur animi recusandae quas dignissimos et nobis non!"
+    },
+
+  ]
   return (
     <div id={id} className="page">
-      <div className="page-content">
         {
           position.y > 200 &&
+      <div className="page-content">
         <LetterByLetter
         text="Products"
         className="product-title"
-        speed={200}
+        speed={100}
         wait={0}
         />
-      }
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "48px",
-          }}
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "48px",
+        }}
         >
-          <div  className="product-card">
-            <h1>Mobile Apps</h1>
-            <span className="product-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-              mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod
-              itaque qui ducimus aspernatur animi recusandae quas dignissimos et
-              nobis non!
-            </span>
-          </div>
-          <div  className="product-card">
-            <h1>Mobile Apps</h1>
-            <span className="product-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-              mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod
-              itaque qui ducimus aspernatur animi recusandae quas dignissimos et
-              nobis non!
-            </span>
-          </div>
-          <div  className="product-card">
-            <h1>Mobile Apps</h1>
-            <span className="product-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-              mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod
-              itaque qui ducimus aspernatur animi recusandae quas dignissimos et
-              nobis non!
-            </span>
-          </div>
-          <div  className="product-card">
-            <h1>Mobile Apps</h1>
-            <span className="product-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-              mollitia excepturi, saepe sed est harum odio, nihil voluptatum quod
-              itaque qui ducimus aspernatur animi recusandae quas dignissimos et
-              nobis non!
-            </span>
-          </div>
+          {
+            products.map((product)=>(
+              <div key={product.id} className="product-card">
+                <span className="product-card-title">{product.tittle}</span>
+                <span className="product-content">{product.content}</span>
+              </div>
+            ))
+          }
         </div>
       </div>
+    }
     </div>
   );
 }

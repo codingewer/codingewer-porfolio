@@ -6,6 +6,7 @@ function TopBar() {
   const [togledLink, setTogletLink] = useState("/");
   const toggleActive = (link) => {
     setTogletLink(link);
+    closeMenu()
   };
   const [toggled, setTogglet] = useState(false);
 
@@ -16,6 +17,10 @@ function TopBar() {
       document.getElementById("top-bar-menu").style.display = "flex";
     }
     setTogglet(!toggled);
+  };
+  const closeMenu = () => {
+    document.getElementById("top-bar-menu").style.display = "none";
+    setTogglet(false);
   };
   return (
     <div className="topbar-container">
@@ -33,24 +38,13 @@ function TopBar() {
             Home
           </Link>
           <Link
-            onClick={() => toggleActive("projects")}
-            className={
-              togledLink === "projects"
-                ? " topbar-navs-a-active topbar-navs-a"
-                : "topbar-navs-a"
-            }
-            href="/"
-          >
-            Projects
-          </Link>
-          <Link
             onClick={() => toggleActive("products")}
             className={
               togledLink === "products"
                 ? " topbar-navs-a-active topbar-navs-a"
                 : "topbar-navs-a"
             }
-            href="#projects"
+            href="#products"
           >
             Products
           </Link>
@@ -61,7 +55,7 @@ function TopBar() {
                 ? " topbar-navs-a-active topbar-navs-a"
                 : "topbar-navs-a"
             }
-            href="/"
+            href="#contact"
           >
             Contact
           </Link>
@@ -111,24 +105,13 @@ function TopBar() {
           Home
         </Link>
         <Link
-          onClick={() => toggleActive("projects")}
-          className={
-            togledLink === "projects"
-              ? " topbar-navs-a-active topbar-navs-a"
-              : "topbar-navs-a"
-          }
-          href="/"
-        >
-          Projects
-        </Link>
-        <Link
           onClick={() => toggleActive("products")}
           className={
             togledLink === "products"
               ? " topbar-navs-a-active topbar-navs-a"
               : "topbar-navs-a"
           }
-          href="/"
+          href="/#products"
         >
           Products
         </Link>
@@ -139,7 +122,7 @@ function TopBar() {
               ? " topbar-navs-a-active topbar-navs-a"
               : "topbar-navs-a"
           }
-          href="#projects"
+          href="#contact"
         >
           Contact
         </Link>

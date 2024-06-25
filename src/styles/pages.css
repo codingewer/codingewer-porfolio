@@ -1,19 +1,19 @@
 .page {
   position: relative;
-  padding-top: 128px;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding-bottom: 24px;
+  padding-top: 128px;
 }
 
-.page-content{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    gap: 48px;
-    backdrop-filter: blur(10px);
+.page-content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 48px;
+  backdrop-filter: blur(10px);
 }
 .product-card {
   position: relative;
@@ -28,26 +28,69 @@
   align-items: center;
   gap: 24px;
   text-align: center;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   transition: all 1s;
+  animation: scaleUp 1s ease forwards;
 }
-.product-content{
-  font-size: 1vw;
+.product-content {
+  font-size: 18px;
 }
 
-.product-title{
+.product-title {
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(--main-color);
   text-align: left;
-  font-size: 5vw;
+  font-size: 10vmin;
 }
 
-.product-card:hover{
-  scale: 1.1;
-  z-index: 3;
-  transition: all 1s;
-  box-shadow: 1px 2px 100px 11px rgba(255, 0, 0, 0.3);
+.product-card-title {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 24px;
+}
+
+.contact-page {
+  position: relative;
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+  height: 60%;
+  gap: 48px;
+}
+.contact-img {
+  width: 45%;
+  height: auto;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  justify-content: end;
+}
+.contact-detail{
+  font-family: "Silkscreen", sans-serif;
+}
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (min-width: 1080px) {
+  .product-card:hover {
+    scale: 1.2;
+    z-index: 3;
+    transition: all 1s;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

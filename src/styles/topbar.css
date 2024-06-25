@@ -8,8 +8,8 @@
   justify-content: center;
   width: 100%;
   height: fit-content;
-  z-index: 2;
-  background: transparent;
+  z-index: 6;
+  background: black;
 }
 
 .topbar-inner {
@@ -87,6 +87,8 @@
         align-items: center;
         gap: 24px;
         padding-block: 24px;
+        background-color: #000000;
+        z-index: 4;
       }
 }
 
