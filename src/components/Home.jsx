@@ -15,19 +15,6 @@ function Home() {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  const [position, setPosition] = useState({
-    x: window.scrollX,
-    y: window.scrollY,
-  });
-  const handleScroll = () => {
-    setPosition({ x: window.scrollX, y: window.scrollY });
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const divs = [
     { id: 1, width: 200 },
     { id: 2, width: 300 },

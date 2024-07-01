@@ -22,11 +22,6 @@ function Contact({id}) {
             <h3>Address</h3>
             <p>Hakkari, Türkiye</p>
           </div>
-          <div className="social-links">
-            <a href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
-            <FontAwesomeIcon  icon={['fab', 'microsoft']}  />
-            </a>  
-          </div>
         </div>
       </div>
     </div>

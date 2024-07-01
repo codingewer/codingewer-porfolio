@@ -69,13 +69,27 @@
 .contact-details {
   display: flex;
   flex-direction: column;
-  width: 45%;
   justify-content: end;
 }
 .contact-detail{
   font-family: "Silkscreen", sans-serif;
 }
 @media screen and (max-width: 1080px) {
+  .contact-page{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 48px;
+  }
+  .contact-detail{
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+  }
+  .contact-img{
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 1080px) {

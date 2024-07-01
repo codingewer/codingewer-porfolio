@@ -3,14 +3,18 @@ import React, { useEffect, useState } from "react";
 import LetterByLetter from "./LetterByLetter";
 
 function Products({ id }) {
-  const [position, setPosition] = useState({ x: window.scrollX, y: window.scrollY });
+  const [position, setPosition] = useState( typeof window !=="undefined" && { x: window.scrollX, y: window.scrollY });
   const handleScroll = () => {
     setPosition({ x: window.scrollX, y: window.scrollY });
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    if(typeof window !=="undefined"){
+      window.addEventListener("scroll", handleScroll);
+    }
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if(typeof window !==null){
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
   useEffect(() => {

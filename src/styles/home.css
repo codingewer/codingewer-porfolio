@@ -116,6 +116,9 @@
   #cursor-shadow{
     display: none;
   }
+  .container{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1080px) {

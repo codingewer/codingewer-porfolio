@@ -1,3 +1,5 @@
+"use client"
+
 import Contact from "@/components/Contact";
 import Home from "@/components/Home";
 import Products from "@/components/Products";
